@@ -5,6 +5,8 @@ import styles from '@/styles/Home.module.css'
 import {Box, Typography} from '@mui/material'
 const inter = Inter({ subsets: ['latin'] })
 import Link from 'next/link'
+import {MainLayout} from "@/components/layout";
+import Contact from "@/pages/contact";
 export default function Home() {
   return (
     <>
@@ -30,3 +32,4 @@ export default function Home() {
     </>
   )
 }
+Home.Layout = MainLayout

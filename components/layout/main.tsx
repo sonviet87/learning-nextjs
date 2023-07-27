@@ -1,17 +1,23 @@
 import { LayoutProps } from '@/models';
 import Link from 'next/link';
 import * as React from 'react';
+import {Stack} from "@mui/material";
+import {Footer, Header} from "@/components/common";
+import {Box} from "@mui/system";
 
 export interface IMainLayoutProps {
 }
 
 export function MainLayout({ children }: LayoutProps) {
     return (
-        <div>
+        <Stack>
+            <Header/>
             <h1>Main layout</h1>
             <Link href="/posts">Post</Link>
             <Link href="/contact">contact</Link>
-            <div>{children}</div>
-        </div>
+
+            <Box component="main">{children}</Box>
+            <Footer/>
+        </Stack>
     );
 }
